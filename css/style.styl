@@ -1,0 +1,165 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
+@import 'normalize.styl'
+@import 'icon1.styl'
+
+vendor-prefixes = o ms moz webkit official
+ver_elosk = #1FAF41
+gris_body = #EDECEC
+gris_semioscuro = #D9D5D5
+letra-font = #474646
+blanco = #FFFFFF
+verde_semioscuro = rgba(32,123,6,0.2)
+
+
+@font-face
+    font-family Roboto
+    src url('../font/Roboto.ttf') format('truetype')
+
+a
+    text-decoration none
+    &:link
+    &:visited
+        color letra-font
+
+body
+    background gris_body
+    font-size 0px
+
+header
+    display inline-block
+
+section
+    font-size 14px
+    article
+        position relative
+        top 65px
+        width 100%
+
+// ------------------------------------MENU--------------------------------------
+nav
+    // border 1px solid black
+    background white
+    border-right 1px solid gris_semioscuro
+    box-shadow: 1px 0px 5px -3px rgba(0,0,0,0.75);
+    color letra-font
+    font-family Roboto
+    font-size 14px
+    font-weight bold
+    height calc(100vh - 65px)
+    margin 0
+    position fixed
+    top 65px
+    width 260px
+    z-index 2
+    user-select none
+    left -100%
+    ul
+        margin 0
+        padding 15px 0 0px 0
+        position relative
+        top -52px
+        li
+            // border 1px solid black
+            list-style none
+            padding 8px
+    .image_nav
+        height auto
+        width 100%
+        &-usuario
+            width 55px
+            height auto
+            margin 0
+            padding 0
+            position absolute
+            top 35px
+            left 18px
+            border-radius 40px
+            border 2px solid gris_semioscuro
+    .profile
+        li:nth-child(1)
+            padding-left 20px
+        &-usuario
+            background-color letra-font
+            background rgba(0,0,0,.5)
+            color blanco
+            font-weight normal
+            cursor pointer
+        &-usuario-opcion
+                &:hover
+                    background gris_body
+    .menu
+        li
+            &:hover
+                background gris_body
+
+.activo
+    background-color gris_body
+    color black
+// --------------------------------------------------------------------------
+// ----------------------------ICONS-------------------------------
+.caret
+    box-sizing border-box
+    padding-left 18px
+    padding-right 15px
+.icon-sign-in
+    padding-left 21px
+.icon-triangle-up2
+.icon-triangle-down2
+    float right
+    position relative
+    top 2px
+    font-size 12px
+// --------------------------------------------------
+
+#inicial
+    background  ver_elosk
+    box-shadow 0px 2px 15px -3px rgba(0,0,0,0.75)
+    display block
+    font-size 14px
+    height 65px
+    position fixed
+    width 100%
+    z-index 100
+    z-index 4
+    display flex
+    user-select none
+    div
+        // border 1px solid black
+        width 50%
+    .inicial-menu
+        // border 1px solid black
+        margin-left 20px
+        .icon-indent-increase
+        .icon-menu
+            // border 1px solid black
+            width 25px
+            color white
+            font-size 24px
+            display inline-block
+            vertical-align top
+            position fixed
+            top 19.5px
+            left 30px
+            z-index 2
+            cursor pointer
+        .inicial-menu-menu
+            // border 1px solid black
+            font-size 24px
+            vertical-align top
+            display inline-block
+            width 98px
+            padding 5px
+            color blanco
+            cursor pointer
+            text-align center
+            position fixed
+            top 12.5px
+            padding-left 30px
+    .inicial-part-two
+        .nav-logo
+            .image_nav
+                margin-right 10px
+                float right
+                width 148px
+                height auto
